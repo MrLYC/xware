@@ -3,7 +3,7 @@
 pid=
 trap '[[ $pid ]] && kill $pid; ./portal -s; exit 0' SIGINT SIGTERM
 while :
-do 
+do
 	sleep 60 & pid=$!
 	wait
 	pid=

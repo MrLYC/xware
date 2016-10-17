@@ -1,5 +1,5 @@
 xware:
-  image: zwh8800/xware
+  image: mrlyc/xware-kodexplorer
   restart: always
   volumes:
     - ./cfg:/xware/cfg
