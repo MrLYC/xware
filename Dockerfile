@@ -11,6 +11,9 @@ WORKDIR /xware
 ADD Xware1.0.31_x86_32_glibc.tar.gz /xware
 ADD monitor.sh /xware
 
-VOLUME /data
+ADD ./app/images/thunder.png /app/static/images/thunder.png
+ADD ./app/desktop/thunder.oexe /app/data/User/admin/home/desktop/thunder.oexe
+
+VOLUME /app
 
 CMD ["./monitor.sh"]
