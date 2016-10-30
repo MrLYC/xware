@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 /run.sh &
-./portal
+./portal > xware_portal.log
 pid=
 trap '[[ $pid ]] && kill $pid; ./portal -s; exit 0' SIGINT SIGTERM
 while :
@@ -14,8 +14,7 @@ do
         if [ $? -ne 0 ]
         then
                 echo "start process....."
-                ./portal
-        else
+                ./portal >> xware_portal.log
                 echo "runing....."
         fi
 done
